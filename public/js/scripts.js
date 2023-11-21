@@ -1,29 +1,25 @@
-let expressao ='';
+
 function insert(num){
-    expressao += num;
-    atualizarVisor();
+    var numero = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = numero + num;
 }
 function clean(){
-    expressao = '';
-    atualizarVisor();
+    document.getElementById('resultado').innerHTML = "";
 }
 function back(){
-    expressao = expressao.slice(0,-1);
-    atualizarVisor();
+    var resultado = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
 }
 function calcular(){
-    try {
-        const resultado = eval(expressao);
-        expressao = resultado.toString();
-        atualizarVisor();
-    } catch (error) {
-        expressao = 'Erro';
-        atualizarVisor();
-    } 
-}
+    var resultado = document.getElementById('resultado').innerHTML;
+    if(resultado){
+        document.getElementById('resultado').innerHTML = eval(resultado);
 
-function atualizarVisor(){
-    document.getElementById('resultado').innerText = expressao;
+    }else{
+        document.getElementById('resultado').innerHTML = "Nada para calcular"
+    }
+    
 }
 
 module.exports = {insert, clean, back, calcular}
+
