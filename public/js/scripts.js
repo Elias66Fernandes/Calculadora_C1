@@ -23,7 +23,7 @@ function calcular(){
 }
 
 function atualizarVisor(){
-    document.getElementById('resultado').innetText = expressao;
+    document.getElementById('resultado').innerText = expressao;
 }
 
 module.exports = {insert, clean, back, calcular}
