@@ -19,7 +19,7 @@ function calcular(){
     } catch (error) {
         expressao = 'Erro';
         atualizarVisor();
-    }
+    } 
 }
 
 function atualizarVisor(){
