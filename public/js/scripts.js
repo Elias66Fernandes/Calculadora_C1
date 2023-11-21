@@ -4,10 +4,12 @@ function insert(num){
     atualizarVisor();
 }
 function clean(){
-    
+    expressao = '';
+    atualizarVisor();
 }
 function back(){
-    
+    expressao = expressao.slice(0,-1);
+    atualizarVisor();
 }
 function calcular(){
     
