@@ -12,7 +12,14 @@ function back(){
     atualizarVisor();
 }
 function calcular(){
-    
+    try {
+        const resultado = eval(expressao);
+        expressao = resultado.toString();
+        atualizarVisor();
+    } catch (error) {
+        expressao = 'Erro';
+        atualizarVisor();
+    }
 }
 
 function atualizarVisor(){
